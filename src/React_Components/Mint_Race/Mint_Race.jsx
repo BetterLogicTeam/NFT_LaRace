@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Mint_race.css";
 import zan from "../../Assest/gameplay-thumbnail2.png";
+import Collection from "./Collection";
+import Racing from "./Racing";
+import Racing_HorseMain from "./Racing";
 export default function Mint_Race() {
+
+  const [collection, setcollection] = useState(0);
+  const [Racing, setRacing] = useState(false);
+  const [active, setactive] = useState(false);
+
+  const handleButtonClick = (newData) => {
+    setcollection(newData);
+  };
   return (
     <div>
       <div className="imagePool">
@@ -33,28 +44,30 @@ export default function Mint_Race() {
             </div>
           </div>
           <div className="row d-flex justify-content-center justify-content-around">
-            <div className="col-3 staking-box">
+            <div className="col-lg-3 staking-box">
               <div>
                 <div className="row d-flex justify-content-center mt-3 mb-3">
                   <a
+                  style={{textDecoration: "none"}}
                     aria-current="page"
-                    className="col-10 staking-btn_active"
-                    href="/Mint"
-                    style={{ textDecoration: "none", color: "white" }}
+                    className={collection==0? "col-10  staking-btn_active":"col-10  staking-btn"}
+                  
+                    
                   >
                     <div className="">
                       <div className="d-grid gap-2">
                         <button
                           className="btn  text-start d-flex align-items-center"
                           style={{
-                            color: "rgb(253, 80, 67)",
+                            // color: "rgb(253, 80, 67)",
                             fontSize: 18,
                             fontWeight: "bold",
                           }}
+                          onClick={() => handleButtonClick(0)}
                         >
                           <img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAA0lBMVEUAAACHzuj0niEZXIbzmyD3t0D+vkD1nyLynSD7u0CHz+kZXYW/s3yHzecYWoWHy+fvnyDPqk4pbZSHz+mGz+khZYxfenCIzekZXIaHzucaW4XznSAZW4YYXIMZXIWHzun9vUD0niF5wNz/14LGuII1bITFuIOMmYNvioRSdHTEpVE0eJ7fwWr///8nZIXd8fmW1OyiwbZgg4RSe4Tix4P4wG/p9vvS7PdEc4SboYPS7fed1+3858dXm7z74bomapFfipBEc4WoqYOLmYO1r3f2sEp+SzGvAAAAHnRSTlMAv7+/QCC/n2BA3994YGBAIO/fz8/Pz6+voJ+AcED7XPcgAAAA7UlEQVQ4y7XPZ2/CMBCA4bTQFSilLXtcGAkOmJXB3uv//yXkmHxwCOeAxPvhdIoeKT4lUPxVqKyE9VkX+pCj9UhEb14BtAyg9xrrS0SjE4r8wlE6zkpalpVkSzoU8b41Tfvh632oWor9eigX4/1RSrNsKaR8kwKAjofacFXlghIYSlwQYAhuIJMQk08EtZpNnc8noQ09dllbyj73DcPgU0Crhh92nR96ne26ADN3jz7ccByAnTNF0ZQQAJuYKLJ1HeCgzwC5Dik6+lfVBpqqZhQtQo+h4Xi8kKJBrzeIgiby303mQyl6/Lrii7T8GdrueER0ZUkBAAAAAElFTkSuQmCC"
-                             width="10%"
+                            width="10%"
                             className="side_bar_imges"
                           />
                           &nbsp;&nbsp; Mint
@@ -65,9 +78,9 @@ export default function Mint_Race() {
                 </div>
                 <div className="row d-flex justify-content-center mt-3 mb-3">
                   <a
-                    className="col-10 staking-btn "
-                    href="/Staking"
-                    style={{ textDecoration: "none" }}
+                  style={{textDecoration: "none"}}
+                     className={collection==1? "col-10  staking-btn_active":"col-10  staking-btn"}
+             
                   >
                     <div className="">
                       <div className="d-grid gap-2">
@@ -77,12 +90,13 @@ export default function Mint_Race() {
                             // color: "rgb(253, 80, 67)",
                             fontSize: 18,
                             fontWeight: "bold",
+                            
                           }}
+                          onClick={() => handleButtonClick(1)}
                         >
                           <img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAAn1BMVEUAAACHz+mHz+kYXIMYW4SHzuqHx+d2tcqFzeiFy+cVVYWHzumIz+kZXIOHzeeGzOmKyur///+Hzun/14LS7fcZXIXh8/mowdFwmbJShKP/9eDG1+FTe4RvmbOpwtL/8NHj6/Cl0M//5rDx9fiv3vHU4ej//fjp7NyauMpZd3G75PPU4On/+Oi3zNmMrsJ+o7v/6bn/4aH/2Yo1aH2Zkl7wJxJzAAAAEXRSTlMAn79AoO8gz5BAGM+vkGBQMIoEhRgAAADQSURBVDjLxdTXDoIwFIBhxYm7BWRUBQQU3Ov9n81DEwKm03jhf9svbXLSnFaVaWBeRr9VN8OCeg0F9xxsthTj4QdaIjYb47YIJUdEiAq5PnIcV45o/o+IeLRcB13kyKddEcoSIYpc2pmZk84wRx1oEMf7oGrHoqkDraxGjxODugyytjoolKN7CAWIg4onoOZDPPQqNBD0FbohKNuURcJh0jmuHUj86VwPinRQpkARgRIFosdEiqq0UO6XEQmq+zeaYJwqV4+pXmLQfMwlxgLO3imhSX2oX/U4AAAAAElFTkSuQmCC"
-
-                             width="10px"
+                            width="10px"
                             className="side_bar_imges"
                           />
                           &nbsp;&nbsp; Collection
@@ -93,9 +107,8 @@ export default function Mint_Race() {
                 </div>
                 <div className="row d-flex justify-content-center mt-3 mb-3">
                   <a
-                    className="col-10 staking-btn "
-                    href="/Staking"
-                    style={{ textDecoration: "none" }}
+        style={{textDecoration: "none"}}
+                    className={collection==2 ? "col-10  staking-btn_active":"col-10  staking-btn"}
                   >
                     <div className="">
                       <div className="d-grid gap-2">
@@ -106,10 +119,11 @@ export default function Mint_Race() {
                             fontSize: 18,
                             fontWeight: "bold",
                           }}
+                          onClick={() => handleButtonClick(2)}
                         >
                           <img
                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAMAAADW3miqAAAAn1BMVEUAAAD9vUAZWob9vUD8vED7u0D8vED3t0D/vULOxIMZXYWclF6UkGD+vkD+vUA0aHwaXIf8vED6ukD9vUCHzukZXIWLjWLSq02nmVrhsUnvt0RugGsnYoE1aH1gpcXEpVG7x5/CxpSZkl+nmVmdy8mzx6nJxIpEbnhSdHNgem/fwWp9hmd9h2agmmS2n1b1vkqVzNTRw3+LjGOZk17uv1WYyEMSAAAAE3RSTlMAgF+fYEC/IB/v39/Pv6+Af1AwC6ZmZQAAAP9JREFUOMu10Nd2wjAQBNAI25DeVsKSkhgXek37/2+LszlmycpreGGe75lZ6eJ4etcnGNM7qxkMnpM4ViqK7u9uBKOAYs3tCabqd5hd8T7ON6aCfkfPWGudmQ1AJJsPNNkUkWBggkZPAFSLmaeI8hplWueImPEwfEW11JglQBz0LF4aVfyaAgCeeM/Wve3V9/RqB3US1mONbRQl4e8atqhLMo8jYCpEyruyXanDrXQNTIWmzspyFRpI/f+75txg3MwfKo+GIwD7uVcLMkylVdO1pa2wa/Z31xf2SMr7kv1P6+KajKxgVZKRu9wITbdyD5IhhVuy4kZWZGRFRlaC+QGtMy79AEZmJAAAAABJRU5ErkJggg=="
-                             width="10px"
+                            width="10px"
                             className="side_bar_imges"
                           />
                           &nbsp;&nbsp; Racing
@@ -129,11 +143,11 @@ export default function Mint_Race() {
                       className="mint-image"
                     /> */}
 
-                    <h1 className=" mint-image">MINT</h1>
-
+                    <h1 className=" mint-image">{collection == 0 ? 'MINT' : collection == 1 ? "Collection" : "Racing"}</h1>
                   </div>
 
-                  <div className="row d-flex justify-content-center mt-1 mb-2">
+                    {collection == 0 ? (<>
+                      <div className="row d-flex justify-content-center mt-1 mb-2">
                     <div className="col-md-11 col-11 mint-boxs  pb-4 mb-5">
                       <div className="row d-flex justify-content-center m-3">
                         <div className="col-lg-6 d-flex justify-content-center align-items-center mt-3 mb-3">
@@ -162,6 +176,10 @@ export default function Mint_Race() {
                       </div>
                     </div>
                   </div>
+                    </>) : collection==1? <><Collection /></>:<><Racing_HorseMain /></>}
+
+                 
+                  
                 </div>
               </div>
             </div>

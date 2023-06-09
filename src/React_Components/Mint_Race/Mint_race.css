@@ -56,15 +56,17 @@
 }
 .mint-image {
     position: relative;
-    top: -80px;
+    top: -55px;
     width: 200px !important;
-    height: 100px;
+    height: 56px;
     border: 2px 2px 0px 2px solid #ffffff;
-    border-radius: 15px;
-    background: #26282f;
-    padding: 15px;
+    border-radius: 15px 15px 0 0;
+    background: rgba(26,28,35,.96);
+    padding: 22px 15px 12px 15px;
     text-align: center;
-
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
 }
 .mint-boxs {
     background: #26282f;
@@ -140,4 +142,58 @@
     font-size: 15px;
     line-height: 132%;
     color: #fd5043;
+}
+
+.see_more_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.see_more{
+    width: 30%;
+    border-radius: 10px;
+    background-color: rgb(77,35,33);
+}
+
+@media screen and (max-width: 1100px) {
+    .staking-box{
+        height: auto;
+        width: 80%;
+    }
+
+    .presale-box1{
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .mintbtn12{
+        padding: 0;
+    }
+
+    
+}
+
+@media screen and (max-width: 500px) {
+    .see_more{
+        width: auto;
+    }
+
+    #mint-pic{
+        margin-left: 0;
+    }
+
+    .mint-image{
+        width: 180px !important;
+    }
+
+    .viewPega{
+        padding-right: 15px !important;
+    }
+}
+
+.list-pick{
+    justify-content: center;
 }
