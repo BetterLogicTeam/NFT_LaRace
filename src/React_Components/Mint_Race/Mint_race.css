@@ -1,0 +1,143 @@
+.imagePool {
+    font-family: 'Rubik', sans-serif !important;
+    background: linear-gradient(90deg, #201D48 -1.1%, #2A033A 107.91%);
+    box-sizing: border-box;
+    scroll-behavior: smooth !important;
+    background-size: cover;
+    background-position: 50%;
+    min-height: 100%;
+}
+#presale-back {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #fff;
+}
+.poolbtn {
+    background: linear-gradient(90deg,#f92d1e 1.7%,#ff5043);
+    border-radius: 80px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
+    padding: 10px 15px;
+}
+.staking-box {
+    background: linear-gradient(180deg,rgba(26,28,35,.96),rgba(15,17,21,.96));
+    /* filter: blur(   50px); */
+    box-shadow: 0 8px 8px rgba(0,0,0,.08);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 24px;
+    height: 500px;
+    margin-top: 3rem;
+}
+.staking-btn {
+    background-color: #5e606e;
+    opacity: 0.9;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 132%;
+    color: #fff !important;
+    box-shadow: none!important;
+    outline: none;
+}
+
+.presale-box1 {
+    background: rgba(26,28,35,.96);
+    box-shadow: 0 8px 8px rgba(0,0,0,.08);
+    -webkit-backdrop-filter: blur(2em);
+    backdrop-filter: blur(2em);
+    border-radius: 27px;
+    border: 1px solid rgba(255, 255, 255, .5);
+    
+}
+.mint-image {
+    position: relative;
+    top: -80px;
+    width: 200px !important;
+    height: 100px;
+    border: 2px 2px 0px 2px solid #ffffff;
+    border-radius: 15px;
+    background: #26282f;
+    padding: 15px;
+    text-align: center;
+
+}
+.mint-boxs {
+    background: #26282f;
+    box-shadow: 0 8px 8px rgba(0,0,0,.08);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    border-radius: 16px;
+}
+#mint-pic {
+    width: 280px;
+    transform: scaleX(-1);
+    margin-left: -2rem;
+}
+.mint-boxes {
+    background: linear-gradient(90deg,#1a1c23,rgba(26,28,35,0));
+    border-radius: 8px;
+}
+.mint-span, .mint-span1 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 132%;
+}
+
+.mint-span {
+    color: #fff;
+}
+.mint-span1 {
+    color: #5e606e;
+}
+
+.mint-span, .mint-span1 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 132%;
+}
+
+.boxess {
+    Width: 120px;
+    Height: 50px;
+    background: #1c1f26;
+    border: 2px solid #292c38;
+    box-sizing: border-box;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 132%;
+    color: #fff;
+}
+.mintbtn12 {
+    background: linear-gradient(180deg,#ff5043,#f92d1e);
+    border-radius: 50px;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 33px;
+    padding: 5px 87px;
+    color: #fff;
+}
+.mintspan23 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #b1b1b1;
+}
+
+.side_bar_imges{
+    width: 40px !important;
+}
+.staking-btn_active {
+    background-color: #532421;
+    opacity: .9;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 132%;
+    color: #fd5043;
+}

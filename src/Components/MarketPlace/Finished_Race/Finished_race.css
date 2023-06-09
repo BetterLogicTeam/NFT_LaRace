@@ -1,0 +1,5 @@
+@media (max-width: 768px){
+.viewTable .tableHeader .header-title {
+    min-width: 178px !important;
+}
+}
